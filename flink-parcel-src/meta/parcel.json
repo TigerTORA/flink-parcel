@@ -1,0 +1,36 @@
+{
+	"schema_version": 1,
+	"name": "%SERVICENAME%",
+	"version": "%VERSION%-BIN-HADOOP26-SCALA_2.12",
+	"depends": "CDH (>= 5.2), CDH (<< 6.0)",
+	"setActiveSymlink": true,
+	"replaces": "FLINK",
+	"scripts": {
+        	"defines": "flink_env.sh"
+			},
+	"packages": [{
+		"name": "flink-master",
+		"version": "1.6.0+flink1.6.0"
+			},
+		 {
+		"name": "flink-worker",
+		"version": "1.6.0+flink1.6.0"
+			}],
+	"components": [{
+		"name": "flink",
+		"version": "1.6.0-flink1.6.0",
+		"pkg_version": "1.6.0+flink1.6.0",
+        	"pkg_release": "hadoop_2.6-scala_2.11"
+			}],
+	"provides": ["%SERVICENAMELOWER%"],
+	"users": {
+		"flink": {
+		"longname": "Flink",
+		"home": "/var/lib/flink",
+		"shell": "/bin/bash",
+		"extra_groups": []
+				}
+			},
+	"groups": ["flink"]
+}
+
