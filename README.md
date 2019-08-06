@@ -3,7 +3,7 @@
 ```
 git clone https://github.com/TigerTORA/flink-parcel.git
 ```
-2. 生产parcel文件
+2. 生成parcel文件
 ```
 ./build.sh  parcel
 ```
